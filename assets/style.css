@@ -1,0 +1,184 @@
+body {
+	text-align: justify;
+}
+
+/* li:last-child {
+	color: blue;
+}
+
+li:nth-child(2) {
+	color: purple;
+}
+
+li:only-child {
+	color: purple;
+} */
+
+/* Advanced Selectors */
+/* Every article that follows a paragraph. */
+h2 + p {
+	color: purple;
+}
+
+/* General Sibling selector */
+/* Every button that is followed by a textarea and both are under same parent. */
+textarea ~ button {
+	color: red;
+}
+
+/* Every single child of an element */
+li:nth-child(3) {
+	color: blue;
+}
+ul > li {
+	color: red;
+}
+
+button[class$='alert'] {
+	color: purple;
+}
+
+button[class|='submit alert'] {
+	background-color: black;
+}
+
+/*  Radial */
+
+.radial {
+	width: 50%;
+	height: 200px;
+	background: linear-gradient(98deg, red 5%, black 10%, darkgrey 10%);
+	border: 10px solid blue;
+	padding: 10px;
+	margin: 40px;
+}
+
+.rd2 {
+	width: 100%;
+	height: 200px;
+	border: 1px white solid;
+	background-color: #cccccc;
+	background-image: url('img.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+p {
+	font-size: 1rem;
+}
+
+/* Flexbox */
+.flex-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: flex-end;
+}
+
+div[class^='class'] {
+	width: 30vw;
+	height: 100px;
+	border: 1px solid lightblue;
+	margin: 5px;
+	font-family: sans-serif;
+	text-align: center;
+	line-height: 100px;
+	font-size: 30px;
+	background-color: #0074d9;
+	color: white;
+
+	/* flex-grow: 1; */
+	/* flex-shrink: ; */
+	/* flex-basis: 100px; */
+}
+
+.class-2 {
+	/* flex-shrink: 4; */
+}
+
+/* Grid */
+.grid-container {
+	background-color: #cccccc;
+	height: 600px;
+	display: grid;
+	/* grid-template-columns: auto auto; */
+	/* grid-template-rows: auto auto; */
+
+	/* Horizontally adjust with Grid */
+	/* justify-content: space-evenly; */
+
+	/* Vertically Align Content */
+	align-content: center;
+
+	/* Column & Row Gaps */
+	/* Row and Column */
+	grid-gap: 3vw 5vw;
+	/* grid-row-gap: 3vw; */
+	/* grid-column-gap: 5vw; */
+
+	/* Column & Row Lines */
+	/* grid-row: 1/2 | 1/ span 1; */
+	/* grid-column: 1/2 | 1/ span 1; */
+
+	/* Grid Area Summarize grid-row and column */
+}
+.class-1 {
+	/* grid-area: 1 / 1 / span 4 / span 2; */
+	grid-row: 1 / span 4;
+	grid-column: 1 / span 2;
+}
+
+.transition-container {
+	background-color: pink;
+	width: 90vw;
+	height: 200px;
+	margin: 1rem;
+	transition: all 300ms ease-in-out;
+	/* For browser Support Safari, Mozila and Opera in order. */
+	-webkit-transition: all 300ms ease-in-out;
+	-moz-transition: all 300ms ease-in-out;
+	-o-transition: all 300ms ease-in-out;
+}
+
+.transition-container:hover {
+	background-color: black;
+	padding-top: 20px;
+	/* transform: translate(1rem, -50px); */
+	/* transform: scale(2); */
+	/* transform: rotate(-10deg); */
+	/* transform: skewY(20deg); */
+	/* Scale, skewX, skewY,  */
+	transform: matrix(1, 0.1, 0.1, 1, 10, 10);
+}
+.circle-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.circle {
+	width: 10rem;
+	height: 150px;
+	background-color: rgb(0, 139, 93);
+	border-radius: 100%;
+	/* animation-name: img-magic;
+	animation-duration: 1s;
+	animation-timing-function: ease-out;
+	animation-delay: 200ms;
+	animation-iteration-count: infinite;
+	animation-direction: alternate; */
+	animation: img-magic 1s ease-in 200ms infinite alternate;
+}
+
+/* Keyframes */
+@keyframes img-magic {
+	0% {
+		border: 1px solid rgb(0, 139, 93);
+		transform: translate(2rem, 40px);
+	}
+
+	100% {
+		border: 6px solid rgb(0, 139, 93);
+	}
+}
